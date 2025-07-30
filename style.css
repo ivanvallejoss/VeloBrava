@@ -1,0 +1,594 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-color: #F9FBFF;
+}
+
+button{
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 800;
+    color: white;
+}
+
+/* 
+
+DOTS
+
+*/
+
+.dots{
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+
+}
+
+
+
+/* 
+
+    BARRA DE NAVEGACION
+
+*/
+
+#navbar{
+    background: rgba(245, 245, 245, 0.9);
+    backdrop-filter: blur(20px);
+    position: sticky;
+    top: 0px;
+    min-width: 100vw;
+    min-height: 8vh;
+    z-index: 1000;
+}
+
+#navbar .brand{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+    min-width: 100vw;
+    height: 8vh;
+}
+
+#navbar .brand-name{
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+#navbar img{
+    max-width: 100%;
+    max-height: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* 
+
+    SECCION HERO
+
+*/
+
+.hero_section{
+    min-height: 92vh;
+    background: url('assets/costa_brava.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_container{
+    color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    padding: 0 20px;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+
+.hero_container h1{
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.hero_container p{
+    font-weight: 600;
+}
+
+.hero_btn{
+    margin: 10px 0 0 0px;
+    display: flex;
+    flex-direction: column;
+    min-width: 50%;
+    border-radius: 20px;
+}
+
+.hero_btn button{
+    background: linear-gradient(rgba(0, 0, 0, 0.2));
+    height: 50px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 10px black;
+}
+
+
+#primario{
+    background-color: #2563eb;
+}
+
+#primario:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.4);
+}
+
+#secondary{
+    color: white;
+    border: 1px solid white;
+}
+
+#secondary:hover{
+    background-color: rgb(240, 235, 235);
+    color: #1f2937;
+    transform: translateY(-1px);
+}
+
+
+/* 
+
+    SECCION TOURS
+
+*/
+
+.tour_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 30px 1em;
+}
+
+.tour_article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tour_article .description{
+    text-align: center;
+}
+
+.tour_article h1{
+    font-size: 1.5em;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.tour_article p{
+    font-weight: 200;
+    color: rgb(88, 88, 88);
+    font-size: 0.8em;
+    margin: 5px auto;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    background-color: #FAFAF9;
+    box-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);
+    border-radius: 20px;
+    height: 70vh;
+}
+
+.card_img{
+    height: 50%;
+    min-width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0px 0px;
+    background-color: lightblue;
+}
+
+.card_description{
+    height: 50%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly
+}
+
+.card_description__title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_description__title h2{
+    font-size: 1.2em;
+    font-weight: 550;
+}
+
+.card_description__title span{
+    font-weight: 400;
+    color: #2563eb;
+}
+
+.card_description__title small{
+    color: rgb(88, 88, 88);
+    background-color: transparent;
+}
+
+.card_description__properties{
+    display: flex;
+    margin-top: -7px;
+    font-weight: 200;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: rgb(88, 88, 88);
+
+}
+
+.card_description p{
+    font-weight: 400;
+    font-size: 0.9em;
+    letter-spacing: -0.2px;
+}
+
+.card_description__btn{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.card_description__btn button{
+    margin: 5px auto;
+    width: 90%;
+    height: 35px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.btn_primary{
+    background-color: #2563eb;
+}
+
+.btn_secondary{
+    background-color: transparent;
+    color: black;
+}
+
+.btn_secondary a{
+    color: rgb(88, 88, 88);
+}
+
+/* 
+
+    EXTRAS TOUR
+
+*/
+
+#extras_article{
+    height: 30vh;
+    margin: 50px auto;
+}
+
+#extras_container{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #FAFAF9;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);
+
+}
+
+#extras_container h2{
+    font-size: 1.2em;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+#extras_container p{
+    font-weight: 400;
+    font-size: 0.9em;
+    letter-spacing: -0.1px;
+    color: rgb(88, 88, 88);
+}
+
+#extras_container button{
+    height: 35px;
+    width: 90%;
+    border-radius: 10px;
+    border: none;
+}
+
+#extras_container  button{
+    background: #1d4ed8;
+    color: white;
+    font-weight: 700;
+}
+
+/* 
+
+    VELOBRAVA SECTION
+
+*/
+
+#velobrava_section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+    margin: 20px auto;
+    padding: auto 1em;
+
+}
+
+.fundadores_title{
+    width: 95%;
+}
+
+.fundadores_title h2{
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.fundadores_title p{
+    color: rgb(88, 88, 88);
+}
+
+#velobrava_article{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#velobrava_article .card{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 90vw;
+    margin: 10px 1em;
+}
+
+#fundadores_slider{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transition: all 0.3s ease-out;
+}
+
+#fundadores_slider .card_description__title{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.fundadores_description{
+    text-align: left;
+    height: 45vh;
+}
+
+.fundadores_description span{
+    color: rgb(88, 88, 88);
+    font-size: 0.8em;
+}
+
+.fundadores_description p{
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.fundadores_properties{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.fundadores_properties span{
+    border: 1px solid black;
+    font-size: 0.7em;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px 3px;
+}
+
+
+/* 
+
+    WHYUS ARTICLE
+
+*/
+
+
+#whyUs{
+    margin: 30px 0px;
+    min-width: 100vw;
+    height: 40vh;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 0.9em;
+    color: rgb(88, 88, 88);
+    background-color: rgb(240, 240, 240);
+}
+
+#whyUs h2{
+    color: black;
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+#whyUs_title{
+    padding: 0 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#whyUs_comment{
+    background-color: rgb(232, 240, 247);
+    color: black;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+}
+
+/* 
+
+    SECCION FORMULARIO
+
+*/
+
+.form_section{
+    width: 100%;
+}
+
+.form .container{
+    margin: 0.5em;
+    padding: 5px;
+    box-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);
+    border-radius: 20px;
+}
+
+.form-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.form-header p{
+    color: rgb(88, 88, 88);
+    letter-spacing: -0.5px;
+    font-weight: 400;
+}
+
+.form-section{
+    padding: 10px;
+    border: none;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label{
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.form-group input{
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 3px 0;
+    font-size: 0.9em;
+}
+
+.form-group select{
+    border: none;
+    font-size: 1em;
+    margin: 3px 0;
+    color: rgb(88, 88, 88);
+}
+
+.form-section span{
+    color: rgb(88, 88, 88);
+    display: block;
+    margin-top: -3px;
+    font-size: 0.8em;
+}
+
+legend{
+    margin-top: 5px;
+    margin-bottom: -12px;
+    font-weight: 600;
+}
+
+.form-group textarea{
+    padding: 10px;
+    font-size: 0.8em;
+    border-radius: 20px;
+    height: 70px;
+}
+
+.char-counter span{
+    display: inline;
+    font-size: 1em;
+    color: black;
+}
+
+.submit-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.submit-btn{
+    height: 50px;
+    background-color: #2563eb;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    margin: 5px;
+}
+
+.submit-btn span{
+    color: white;
+    font-weight: 800;
+    font-size: 1em;
+}
+
+.privacy-note{
+    color: rgb(88, 88, 88);
+    font-size: 1em;
+    margin-top: 2px;
+}
+
+.form-footer{
+    border-bottom: 1px solid black;
+    margin: 1em;
+}
