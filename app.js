@@ -1,6 +1,7 @@
-import {inicializarWhatsapp} from './funcionalidades/whatsapp/form-handler.js';
-import {inicializarNotifications} from './funcionalidades/shared/notification.js';
-import {inicializarScrollSmooth} from './funcionalidades/shared/scroll.js';
+import { inicializarWhatsapp } from './funcionalidades/whatsapp/form-handler.js';
+import { inicializarNotifications } from './funcionalidades/shared/notification.js';
+import { inicializarScrollSmooth } from './funcionalidades/shared/scroll.js';
+import { inicializarCardSlider } from './funcionalidades/shared/animation.js';
 
 
 class App{
@@ -18,9 +19,9 @@ class App{
 
     configurarModulos(){
         try{
+            inicializarCardSlider();
             inicializarNotifications();
             inicializarWhatsapp();
-            console.log('Sistema Whatsapp inicializado correctamente');
             inicializarScrollSmooth();
             console.log(`Sistema de scroll inicializado correctamente`)
         } catch (error){
@@ -31,26 +32,3 @@ class App{
 
 const app = new App();
 window.App = app;
-
-
-
-
-
-
-
-
-// FUNDADORES SLIDES
-
-let cardSlider = document.querySelector("#fundadores_slider")
-let relative = -50 // 50% Es la transicion perfecta para las cards en vista Mobile.
-
-setInterval(function(){
-    let percentage = 1 * relative;
-
-    cardSlider.style.transform = "translateX("+ percentage + "%)";
-    if(relative == 0){
-        relative = -50
-    } else{
-        relative = 0
-    }
-}, 5000)
