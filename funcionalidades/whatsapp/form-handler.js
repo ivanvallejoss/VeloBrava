@@ -52,10 +52,8 @@ export function handleFormSubmit(event){
         const data = Object.fromEntries(formData);
         const tourType = data.tour;
 
-        // Seleccionar guia apropiado
+        // Seleccionamos guia. Generamos URL
         const guide = selectGuide(tourType);
-
-        //Procesar formulario y generar URL
         const whatsappURL = processFormToWhatsapp(form, guide.phone)
 
         //Mostrar confimacion antes de redirigir
@@ -63,7 +61,7 @@ export function handleFormSubmit(event){
 
         if (confirm(confirmMessage)){
             // Abrir whatsapp
-            window.open(whatsappURL, '_blank');
+            window.location.href = whatsappURL;
 
             // Resetear formulario
             form.reset()
@@ -105,20 +103,15 @@ export function handleQuickButton(event){
             throw new Error(`Boton sin tipo de mensaje (data-message)`)
         }
 
-        // Seleccionar guia apropiado.
+        // Seleecionamos guia. Generamos mensaje. Generamos URL de whatsapp
         const guide = selectGuide(tourType);
-
-        // Generar mensaje rapido
         const message = generateQuickMessage(tourType, messageType);
-
-        //Generar URL de WhatsApp
         const whatsappURL = generateWhatsAppURL(guide.phone, message);
 
         // Abrir whatsApp directamente (sin confirmation para botones rapidos)
-        window.open(whatsappURL, '_blank');
+        window.location.href = whatsappURL;
 
         // Mostrar notificacion de exito
-        // const tourName = button.closest('.card')?.querySelector('h4')?.textContent || 'tour';
         mostrarNotification(`Abriendo WhatsApp para consulta sobre`, 'success', 3000);
     } catch (error){
         console.error(`Error en boton rapido de Whatsapp`, error);
