@@ -10,12 +10,13 @@ body{
     font-weight: 400;
     line-height: 1.6;
     overflow-x: hidden;
-    background-color: #F9FBFF;
+    /* background-color: #F9FBFF; */
+    background-color: #f2f2f4;
 }
 
 button{
     text-decoration: none;
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: 800;
     color: white;
 }
@@ -27,22 +28,60 @@ DOTS
 */
 
 .dots{
-    width: 100px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 20px;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    height: 60px;
+    margin: 10px auto 40px auto;
 }
 
 .dot{
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
     background-color: black;
-    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
-
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.9);
+    animation: bounce 1.5s ease-in-out infinite;
 }
+
+/* Efecto para cada punto */
+
+.dot:nth-child(1){
+    animation-delay: 0s;
+}
+
+.dot:nth-child(2){
+    animation-delay: 0.2s;
+}
+.dot:nth-child(1){
+    animation-delay: 0.4s;
+}
+
+/* KeyFrame de salto */
+
+@keyframes bounce{
+    0%, 20%, 50%, 80%, 100%{
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+
+    10%{
+        transform: translateY(-20px);
+        animation-timing-function: ease-in;
+    }
+
+    30%{
+        transform: translateY(-15px);
+        animation-timing-function: ease-in;
+    }
+
+    60%{
+        transform: translateY(-8px);
+        animation-timing-function: ease-in;  
+    }
+}
+
 
 
 
@@ -91,7 +130,7 @@ DOTS
 
 .hero_section{
     min-height: 92vh;
-    background: url('assets/costa_brava.jpeg');
+    background: url('./assets/costa_brava.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -131,10 +170,16 @@ DOTS
     border-radius: 20px;
 }
 
+.hero_btn a{
+    min-height: 40px;
+    min-width: 80px;
+}
+
 .hero_btn button{
     background: linear-gradient(rgba(0, 0, 0, 0.2));
-    height: 50px;
     border: none;
+    width: 100%;
+    height: 50px;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -204,9 +249,9 @@ DOTS
 .card{
     display: flex;
     flex-direction: column;
-    margin: 10px auto;
-    background-color: #FAFAF9;
-    box-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);
+    margin: 10px 0.5em;
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 10px rgba(37, 99, 235, 0.4);
     border-radius: 20px;
     height: 70vh;
 }
@@ -214,7 +259,6 @@ DOTS
 .card_img{
     height: 50%;
     min-width: 100%;
-    height: 100%;
     border-radius: 20px 20px 0px 0px;
     background-color: lightblue;
 }
@@ -224,7 +268,7 @@ DOTS
     padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly
+    justify-content: space-evenly;
 }
 
 .card_description__title{
@@ -233,9 +277,9 @@ DOTS
     align-items: center;
 }
 
-.card_description__title h2{
+.card_description__title h3{
     font-size: 1.2em;
-    font-weight: 550;
+    font-weight: 600;
 }
 
 .card_description__title span{
@@ -252,11 +296,11 @@ DOTS
     display: flex;
     margin-top: -7px;
     font-weight: 200;
+    font-size: 0.8em;
     justify-content: space-between;
     align-items: center;
     text-align: center;
     color: rgb(88, 88, 88);
-
 }
 
 .card_description p{
@@ -272,26 +316,32 @@ DOTS
 }
 
 .card_description__btn button{
-    margin: 5px auto;
+    margin: 5px auto -1px auto;
     width: 90%;
-    height: 35px;
-    border: none;
+    height: 40px;
+    letter-spacing: 1px;
     border-radius: 10px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .btn_primary{
     background-color: #2563eb;
+    border: none;
 }
 
 .btn_secondary{
     background-color: transparent;
+    border: 1px solid black;
     color: black;
 }
 
-.btn_secondary a{
-    color: rgb(88, 88, 88);
+.card_description__btn button:active{
+    height: 35px;
+    width: 85%;
+    box-shadow: 0 2px 10px rgba(37, 99, 235, 0.4);
 }
+
+
 
 /* 
 
@@ -301,7 +351,7 @@ DOTS
 
 #extras_article{
     height: 30vh;
-    margin: 50px auto;
+    margin: auto;
 }
 
 #extras_container{
@@ -311,10 +361,10 @@ DOTS
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-    background-color: #FAFAF9;
+    background-color: #fafaf5;
     border-radius: 20px;
     padding: 10px;
-    box-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);
+    box-shadow: 0 2px 10px rgba(37, 99, 235, 0.4);
 
 }
 
@@ -332,16 +382,14 @@ DOTS
 }
 
 #extras_container button{
-    height: 35px;
+    height: 40px;
     width: 90%;
     border-radius: 10px;
+    letter-spacing: 1px;
     border: none;
-}
-
-#extras_container  button{
     background: #1d4ed8;
     color: white;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 /* 
@@ -356,7 +404,7 @@ DOTS
     align-items: center;
     overflow: hidden;
     text-align: center;
-    margin: 20px auto;
+    margin: 40px auto;
     padding: auto 1em;
 
 }
@@ -395,6 +443,20 @@ DOTS
     flex-direction: row;
     flex-wrap: nowrap;
     transition: all 0.3s ease-out;
+}
+
+#ale-img{
+    background: url(./assets/guias/ale.jpeg);
+    background-size: cover;
+}
+
+.card_img{
+    background: transparent;
+}
+
+#roger-img{
+    background: url('./assets/guias/roger.jpeg');
+    background-size: cover;
 }
 
 #fundadores_slider .card_description__title{
@@ -441,37 +503,39 @@ DOTS
 
 
 #whyUs{
-    margin: 30px 0px;
-    min-width: 100vw;
-    height: 40vh;
-    padding: 0px;
+    margin: 60px 1em;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     font-size: 0.9em;
     color: rgb(88, 88, 88);
-    background-color: rgb(240, 240, 240);
-}
-
-#whyUs h2{
-    color: black;
-    font-size: 1.5em;
-    font-weight: 800;
+    background-color: rgb(235, 232, 232);
+    border-radius: 20px;
 }
 
 #whyUs_title{
-    padding: 0 2em;
+    padding: 5px 2em;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    height: 70%;
 }
 
+#whyUs_title h2{
+    color: black;
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
 #whyUs_comment{
-    background-color: rgb(232, 240, 247);
+    background-color: rgb(232, 242, 252);
     color: black;
     display: flex;
     align-items: center;
-    height: 10vh;
+    height: 30%;
 }
 
 /* 
@@ -485,8 +549,8 @@ DOTS
 }
 
 .form .container{
-    margin: 0.5em;
-    padding: 5px;
+    margin: 0 1em;
+    padding: 10px;
     box-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);
     border-radius: 20px;
 }
@@ -516,7 +580,7 @@ DOTS
 }
 
 .form-group label{
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 500;
 }
 
@@ -524,12 +588,12 @@ DOTS
     border: none;
     border-bottom: 1px solid black;
     margin: 3px 0;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 .form-group select{
     border: none;
-    font-size: 1em;
+    font-size: 0.9em;
     margin: 3px 0;
     color: rgb(88, 88, 88);
 }
@@ -538,7 +602,7 @@ DOTS
     color: rgb(88, 88, 88);
     display: block;
     margin-top: -3px;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 legend{
@@ -568,9 +632,10 @@ legend{
 }
 
 .submit-btn{
-    height: 50px;
+    height: 40px;
+    width: 90%;
     background-color: #2563eb;
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
     border: none;
     margin: 5px;
@@ -578,8 +643,9 @@ legend{
 
 .submit-btn span{
     color: white;
-    font-weight: 800;
-    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 0.9em;
 }
 
 .privacy-note{
@@ -590,5 +656,5 @@ legend{
 
 .form-footer{
     border-bottom: 1px solid black;
-    margin: 1em;
+    margin: 2em;
 }
