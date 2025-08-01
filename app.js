@@ -50,4 +50,4 @@ setInterval(function(){
     } else{
         relative = 0
     }
-}, 4000)
+}, 5000)
