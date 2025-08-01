@@ -1,5 +1,6 @@
 import {inicializarWhatsapp} from './funcionalidades/whatsapp/form-handler.js';
 import {inicializarNotifications} from './funcionalidades/shared/notification.js';
+import {inicializarScrollSmooth} from './funcionalidades/shared/scroll.js';
 
 
 class App{
@@ -20,8 +21,10 @@ class App{
             inicializarNotifications();
             inicializarWhatsapp();
             console.log('Sistema Whatsapp inicializado correctamente');
+            inicializarScrollSmooth();
+            console.log(`Sistema de scroll inicializado correctamente`)
         } catch (error){
-            console.error('Error al inicializar sistema de Whatsapp', error)
+            console.error('Error al inicializar alguno de los sistemas', error)
         }
     }
 }
