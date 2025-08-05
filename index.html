@@ -15,27 +15,28 @@
         <div class="brand">
             <img src="assets/logo-nuevo.jpeg" alt="logo en blanco y negro de la marca VeloBrava - turismo en bicicleta.">
             <span class="brand-name">VELOBRAVA</span>
+            <select name="language-selector" id="" class="language-selector"></select>
         </div>
     </nav>
     <!-- HERO SECTION -->
     <section class="hero_section" id="hero">
         <div class="hero_container">
-            <h1>Costa Brava & Gerona sobre ruedas</h1>
-            <p>Tours ciclistas unicos guiados por locales que conocen cada rincon</p>
+            <h1 data-i18n="hero.title">Costa Brava & Gerona sobre ruedas</h1>
+            <p data-i18n="hero.description">Tours ciclistas unicos guiados por locales que conocen cada rincon</p>
             <div class="hero_btn">
                 <a href="#form">
-                    <button class="hero_btn" id="primario">Comenzar viaje</button>
+                    <button class="hero_btn" id="primario" data-i18n="hero.btn_primario">Comenzar viaje</button>
                 </a>
                 <a href="#costa_brava_clasica">
-                    <button class="hero_btn" id="secondary">Ver Rutas</button>
+                    <button class="hero_btn" id="secondary" data-i18n="hero.btn_secondary">Ver Rutas</button>
                 </a>
             </div>
         </div>
     </section>
     <section class="tour_section">
         <article class="tour_article">
-            <h2>Tours disponibles</h2>
-            <p class="description">Todos los tours incluyen guia personalizado, asistencia basica, paradas fotograficas y adaptaciones segun tu nivel.</p>
+            <h2 data-i18n="tour.title">Tours disponibles</h2>
+            <p class="description" data-i18n="tour.description">Todos los tours incluyen guia personalizado, asistencia basica, paradas fotograficas y adaptaciones segun tu nivel.</p>
             <div class="card">
                 <div class="card_img" id="costa_brava_clasica">
                     <!-- IMG PLACEHOLDER
@@ -44,18 +45,18 @@
                 </div>     
                  <div class="card_description">
                     <div class="card_description__title">
-                        <h3>Costa Brava Clasica</h3>
-                        <span><small>desde</small> $65</span>
+                        <h3 data-i18n="tour.costa_brava.title">Costa Brava Clasica</h3>
+                        <span><small data-i18n="tour.costa_brava.price">desde</small> $65</span>
                     </div>
                     <div class="card_description__properties">
-                        <span><small>4 horas</small></span>
+                        <span><small data-i18n="tour.costa_brava.hours">4 horas</small></span>
                         <span><small>Calella, Llafranc, Tamariu</small></span>
                         <span><small>Alejandro Molina</small></span>
                     </div>
-                    <p>Ruta ideal para disfrutar del mar Mediterraneo, los acantilados mas espectaculares y los pueblos pesqueros mas bonitos de la Costa Brava</p>
+                    <p data-i18n="tour.costa_brava.description">Ruta ideal para disfrutar del mar Mediterraneo, los acantilados mas espectaculares y los pueblos pesqueros mas bonitos de la Costa Brava</p>
                     <div class="card_description__btn">
-                        <button class="btn_primary whatsapp-btn" data-tour="costa-brava" data-message="consulta-rapida">Elegir experiencia</button>
-                        <button class="btn_secondary whatsapp-btn" data-tour="costa-brava" data-message="consulta-general">Mas info</button>
+                        <button class="btn_primary whatsapp-btn" data-tour="costa-brava" data-message="consulta-rapida" data-i18n="tour.costa_brava.btn_primario">Elegir experiencia</button>
+                        <button class="btn_secondary whatsapp-btn" data-tour="costa-brava" data-message="consulta-general" data-i18n="tour.costa_brava.btn_secondary">Mas info</button>
                     </div>
                  </div>
             </div>
@@ -65,18 +66,18 @@
                 </div>     
                  <div class="card_description">
                     <div class="card_description__title">
-                        <h3>Girona Pro Ride</h3>
-                        <span><small>desde</small> $85</span>
+                        <h3 data-i18n="tour.girona_pro.title">Girona Pro Ride</h3>
+                        <span><small data-i18n="tour.girona_pro.price">desde</small> $85</span>
                     </div>
                     <div class="card_description__properties">
-                        <span><small>5-6 horas</small></span>
+                        <span><small data-i18n="tour.girona_pro.hours">5-6 horas</small></span>
                         <span><small>Rocaccorba, Els Angels, Sant Grau</small></span>
                         <span><small>Roger Gura</small></span>
                     </div>
-                    <p>Ruta pensada para ciclistas que buscan entrenar duro como los profesionales.Las mismas subidas miticas donde entrenan los equipos WorldTour</p>
+                    <p data-i18n="tour.girona_pro.description">Ruta pensada para ciclistas que buscan entrenar duro como los profesionales.Las mismas subidas miticas donde entrenan los equipos WorldTour</p>
                     <div class="card_description__btn">
-                        <button class="btn_primary whatsapp-btn" data-tour="girona-pro-ride" data-message="consulta-rapida">Elegir experiencia</button>
-                        <button class="btn_secondary whatsapp-btn" data-tour="girona-pro-ride" data-message="consulta-general">Mas info</button>
+                        <button class="btn_primary whatsapp-btn" data-tour="girona-pro-ride" data-message="consulta-rapida" data-i18n="tour.girona_pro.btn_primario">Elegir experiencia</button>
+                        <button class="btn_secondary whatsapp-btn" data-tour="girona-pro-ride" data-message="consulta-general" data-i18n="tour.girona_pro.btn_secondary">Mas info</button>
                     </div>
                  </div>
             </div>
@@ -88,18 +89,18 @@
                 </div>
                  <div class="card_description">
                     <div class="card_description__title">
-                        <h3>Relax + Gourmet</h3>
-                        <span><small>desde</small> $56</span>
+                        <h3 data-i18n="tour.relax_gourmet.title">Relax + Gourmet</h3>
+                        <span><small data-i18n="tour.relax_gourmet.price">desde</small> $56</span>
                     </div>
                     <div class="card_description__properties">
-                        <span><small>3 horas</small></span>
+                        <span><small data-i18n="tour.relax_gourmet.hours">3 horas</small></span>
                         <span><small>Pals, Peratallada, Masia local</small></span>
                         <span><small>Alejandro Molina</small></span>
                     </div>
-                    <p>Recorrido tranquilo por los pueblos medievales de postal con parada gastronomica en masia local. Incluye cata de vinos o comida tipica catalana.</p>
+                    <p data-i18n="tour.relax_gourmet.description">Recorrido tranquilo por los pueblos medievales de postal con parada gastronomica en masia local. Incluye cata de vinos o comida tipica catalana.</p>
                     <div class="card_description__btn">
-                        <button class="btn_primary whatsapp-btn" data-tour="relax-gourmet" data-message="consulta-rapida">Elegir experiencia</button>
-                        <button class="btn_secondary whatsapp-btn" data-tour="relax-gourmet" data-message="consulta-general">Mas info</button>
+                        <button class="btn_primary whatsapp-btn" data-tour="relax-gourmet" data-message="consulta-rapida" data-i18n="tour.relax_gourmet.btn_primario">Elegir experiencia</button>
+                        <button class="btn_secondary whatsapp-btn" data-tour="relax-gourmet" data-message="consulta-general" data-i18n="tour.relax_gourmet.btn_secondary">Mas info</button>
                     </div>
                  </div>
             </div>
@@ -112,17 +113,17 @@
         <article id="extras_article">
             <div id="extras_container">
                 <div class="extras_container__description">
-                    <h2>¿No encuentras lo que buscas?</h2>
-                    <p>Creamos tours personalizados adaptados a tu nivel, intereses y disponibilidad. Contáctanos para diseñar tu experiencia perfecta en la Costa Brava</p>
+                    <h2 data-i18n="tour.extras.title">¿No encuentras lo que buscas?</h2>
+                    <p data-i18n="tour.extras.description">Creamos tours personalizados adaptados a tu nivel, intereses y disponibilidad. Contáctanos para diseñar tu experiencia perfecta en la Costa Brava</p>
                 </div>
-                <button class="btn_primary whatsapp-btn" data-tour="personalizado" data-message="consulta-general">Tour Personalizado</button>
+                <button class="btn_primary whatsapp-btn" data-tour="personalizado" data-message="consulta-general" data-i18n="tour.extras.btn_primario">Tour Personalizado</button>
             </div>
         </article>
     </section>
     <section id="velobrava_section">
         <div class="fundadores_title">
-            <h2>Somos Velo Brava</h2>
-            <p>Combinamos juventud y competicion con experiencia y conocimiento profundo del terreno.</p>
+            <h2 data-i18n="velobrava.title">Somos Velo Brava</h2>
+            <p data-i18n="velobrava.description">Combinamos juventud y competicion con experiencia y conocimiento profundo del terreno.</p>
         </div>
         <article id="velobrava_article">
             <div id="fundadores_slider">
@@ -134,18 +135,18 @@
                     <div class="card_description">
                         <div class="card_description__title">
                             <h3>Alejandro Molina</h3>
-                            <span class="fundadores_edad">38 años</span>
+                            <span class="fundadores_edad" data-i18n="velobrava.Alejandro.age">38 años</span>
                         </div>
                         <div class="fundadores_description">
-                            <span>¿Quién soy?</span>
-                            <p>Con <b>más de dos decadas</b> pedaleando por la Costa Brava conozco cada curva, cada pueblo y cada rincón secreto.</p>
-                            <span>¿Qué ofrezco?</span>
-                            <p><b>rutas tranquilas, cultura, gastronomía</b> y conexión auténtica con el entorno.</p>
+                            <span data-i18n="velobrava.Alejandro.question_1">¿Quién soy?</span>
+                            <p data-i18n="velobrava.Alejandro.answer_1">Con <b>más de dos decadas</b> pedaleando por la Costa Brava conozco cada curva, cada pueblo y cada rincón secreto.</p>
+                            <span data-i18n="velobrava.Alejandro.question_2">¿Qué ofrezco?</span>
+                            <p data-i18n="velobrava.Alejandro.answer_2"><b>rutas tranquilas, cultura, gastronomía</b> y conexión auténtica con el entorno.</p>
                         </div>
                         <div class="fundadores_properties">
-                            <span>+20 años de experiencia</span>
-                            <span>rutas culturales</span>
-                            <span>conocimiento local</span>
+                            <span data-i18n="velobrava.Alejandro.properties_1">+20 años de experiencia</span>
+                            <span data-i18n="velobrava.Alejandro.properties_2">rutas culturales</span>
+                            <span data-i18n="velobrava.Alejandro.properties_3">conocimiento local</span>
                         </div>
                     </div>
                 </div>
@@ -156,18 +157,18 @@
                     <div class="card_description">
                         <div class="card_description__title">
                             <h3>Roger Pareta</h3>
-                            <span class="fundadores_edad">19 años</span>
+                            <span class="fundadores_edad" data-i18n="velobrava.Roger.age">19 años</span>
                         </div>
                         <div class="fundadores_description">
-                            <span>¿Quién soy?</span>
-                            <p>Ciclista compitiendo en el <b>Equipo Finisher (Ken Pharma)</b>. He crecido entrenando por las carreteras de Girona y quiero compartir esas vistas y sensaciones contigo</p>
-                            <span>¿Qué ofrezco?</span> 
-                            <p>Mostrarte el <b>lado profesional</b> de estas rutas sin perder  el enfoque <b>dinámico</b> para adaptarlo a lo que gustes.</p>
+                            <span data-i18n="velobrava.Roger.question_1">¿Quién soy?</span>
+                            <p data-i18n="velobrava.Roger.answer_1">Ciclista compitiendo en el <b>Equipo Finisher (Ken Pharma)</b>. He crecido entrenando por las carreteras de Girona y quiero compartir esas vistas y sensaciones contigo</p>
+                            <span data-i18n="velobrava.Roger.question_2">¿Qué ofrezco?</span> 
+                            <p data-i18n="velobrava.Roger.answer_2">Mostrarte el <b>lado profesional</b> de estas rutas sin perder el enfoque <b>dinámico</b> para adaptarlo a lo que gustes.</p>
                         </div>
                         <div class="fundadores_properties">
-                            <span>Equipo Ken Pharma</span>
-                            <span>Competición</span>
-                            <span>Rutas pro</span>
+                            <span data-i18n="velobrava.Roger.properties_1">Equipo Ken Pharma</span>
+                            <span data-i18n="velobrava.Roger.properties_2">Competición</span>
+                            <span data-i18n="velobrava.Roger.properties_3">Rutas pro</span>
                         </div>
                     </div>
                 </div>
@@ -175,19 +176,19 @@
         </article>
         <article id="whyUs">
             <div id="whyUs_title">
-                <h2>¿Por qué elegirnos?</h2>
-                <p>Combinamos juventud y competicion con experiencia y conocimiento profundo del terrreno. Ofrecemos tours unicos, seguros y adaptados a todso los nivels. Ademas de una excelente gama de equipamiento ciclista para que no necesites nada mas que pedalear.</p>
+                <h2 data-i18n="whyUs.title">¿Por qué elegirnos?</h2>
+                <p data-i18n="whyUs.description">Combinamos juventud y competicion con experiencia y conocimiento profundo del terrreno. Ofrecemos tours unicos, seguros y adaptados a todso los nivels. Ademas de una excelente gama de equipamiento ciclista para que no necesites nada mas que pedalear.</p>
             </div>
             <div id="whyUs_comment">
-                <p><i>"La Costa Brava es una joya ciclista y nosotros te la mostramos como nadie mas puede hacerlo."</i></p>
+                <p><i data-i18n="whyUs.comment">"La Costa Brava es una joya ciclista y nosotros te la mostramos como nadie mas puede hacerlo."</i></p>
             </div>
         </article>
     </section>
     <section class="form" id="form">
          <div class="container">
             <div class="form-header">
-                <h2>Reserva tu experiencia</h2>
-                <p>Completa el formulario y nos pondremos en contacto contigo por WhatsApp,</p>
+                <h2 data-i18n="form.title">Reserva tu experiencia</h2>
+                <p data-i18n="form.description">Completa el formulario y nos pondremos en contacto contigo por WhatsApp,</p>
             </div>
 
             <!-- FORMULARIO PRINCIPAL -->
@@ -197,7 +198,7 @@
                 <fieldset class="form-section">
                     
                     <div class="form-group">
-                        <label for="name">
+                        <label for="name" data-i18n="form.name">
                             Nombre:
                         </label>
                         <input 
@@ -209,9 +210,8 @@
                             autocomplete="name"
                             minlength="3"
                             maxlength="50"
+                            data-i18n="form.name_placeholder"
                         >
-                        <div class="input-feedback"></div>
-                    </div>
 
                     <div class="form-group">
                         <label for="email">
@@ -222,8 +222,9 @@
                             id="email" 
                             name="email" 
                             required 
-                            placeholder="tu@gmail.com"
+                            placeholder="tu@mail.com"
                             autocomplete="email"
+                            data-i18n="form.email_placeholder"
                         >
                     </div>
                 </fieldset>
@@ -231,33 +232,33 @@
                 <!-- Preferencias del tour -->
                 <fieldset class="form-section">
                     <div class="form-group">
-                        <label for="tour">
+                        <label for="tour" data-i18n="form.tour.title">
                             ¿Qué tour prefieres?
                         </label>
                         <select id="tour" name="tour">
                             <option value="">-- Tours --</option>
-                            <option value="costa-brava">🏖️ Costa Brava Clásica (desde 65€) - 4-5h</option>
-                            <option value="girona-pro">🏁 Girona Pro Ride (desde 85€) - 5-6h</option>
-                            <option value="relax-gourmet">🍷 Relax + Gourmet (desde 55€) - 3-4h</option>
-                            <option value="personalizado">⚙️ Tour Personalizado - A medida</option>
+                            <option value="costa-brava" data-i18n="form.tour.select.costa_brava">🏖️ Costa Brava Clásica (desde 65€) - 4-5h</option>
+                            <option value="girona-pro" data-i18n="form.tour.select.girona_pro">🏁 Girona Pro Ride (desde 85€) - 5-6h</option>
+                            <option value="relax-gourmet" data-i18n="form.tour.select.relax_gourmet">🍷 Relax + Gourmet (desde 55€) - 3-4h</option>
+                            <option value="personalizado" data-i18n="form.tour.select.personalizado">⚙️ Tour Personalizado - A medida</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="level">
+                        <label for="level" data-i18n="form.level.title">
                             ¿Cuál es tu nivel de Ciclismo?
                         </label>
                         <select id="level" name="level" required>
-                            <option value="">-- Niveles --</option>
-                            <option value="principiante">🟢 Principiante - Rutas tranquilas (1-2h)</option>
-                            <option value="intermedio">🟡 Intermedio - Algunas subidas (2-4h)</option>
-                            <option value="avanzado">🟠 Avanzado - Entreno regular (4h+)</option>
-                            <option value="competicion">🔴 Competición - Rutas exigentes</option>
+                            <option value="" data-i18n="form.level.select.title">-- Niveles --</option>
+                            <option value="principiante" data-i18n="form.level.select.principiante">🟢 Principiante - Rutas tranquilas (1-2h)</option>
+                            <option value="intermedio" data-i18n="form.level.select.intermedio">🟡 Intermedio - Algunas subidas (2-4h)</option>
+                            <option value="avanzado" data-i18n="form.level.select.avanzado">🟠 Avanzado - Entreno regular (4h+)</option>
+                            <option value="competicion" data-i18n="form.level.select.competicion">🔴 Competición - Rutas exigentes</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="date">
+                        <label for="date" data-i18n="form.date">
                             Fecha de interes
                         </label>
                         <input 
@@ -266,18 +267,18 @@
                             name="date"
                             min=""
                         >
-                        <span class="date-helper">Si no tienes fecha fija, la coordinaremos por WhatsApp</span>
+                        <span class="date-helper" data-i18n="form.date_helper">Si no tienes fecha fija, la coordinaremos por WhatsApp</span>
                     </div>
                 </fieldset>
 
                 <!-- Comentarios adicionales -->
                 <fieldset class="form-section">
-                    <legend>💬 Cuéntanos más</legend>
+                    <legend data-i18n="form.comments.title">💬 Cuéntanos más</legend>
                     
                     <div class="form-group">
-                        <label for="comments">
+                        <label for="comments" data-i18n="form.comments.description">
                             Comentarios o peticiones especiales
-                            <span class="field-description">Alergias, preferencias, dudas...</span>
+                            <span class="field-description" data-i18n="form.comments.small_description">Alergias, preferencias, dudas...</span>
                         </label>
                         <textarea 
                             id="comments" 
@@ -285,24 +286,21 @@
                             rows="4" 
                             placeholder="Ej: Soy vegetariano, ¿incluye comida? / Tengo una lesión en la rodilla / Somos un grupo de 6 personas..."
                             maxlength="500"
+                            data-i18n="form.comments.placeholder"
                         ></textarea>
-                        <div class="char-counter">
-                            <span class="current">0</span>/<span class="max">500</span>
-                        </div>
-                        <div class="input-feedback"></div>
                     </div>
                 </fieldset>
 
                 <!--envío -->
                 <div class="submit-container">
                     <button type="submit" class="submit-btn">
-                        <span>Enviar por WhatsApp</span>
+                        <span data-i18n="form.submit.title">Enviar por WhatsApp</span>
                     </button>
                     
-                    <p class="privacy-note">
+                    <p class="privacy-note" data-i18n="form.submit.privacy">
                         Al enviar, aceptas que contactemos contigo por WhatsApp para gestionar tu reserva.
                         <br>
-                        <small>No compartimos tus datos con terceros.</small>
+                        <small data-i18n="form.submit.small_privacy">No compartimos tus datos con terceros.</small>
                     </p>
                 </div>
 
@@ -311,12 +309,12 @@
         </div>
         <div class="form-footer">
             <div class="info-box">
-                <h4>📱 ¿Cómo funciona?</h4>
+                <h4 data-i18n="form.footer.title">📱 ¿Cómo funciona?</h4>
                 <ul>
-                    <li>Completas este formulario</li>
-                    <li>Te redirigimos a WhatsApp con tu consulta</li>
-                    <li>Nuestro guía especialista te responde</li>
-                    <li>¡Confirmamos y a pedalear!</li>
+                    <li data-i18n="form.footer.punto_1">Completas este formulario</li>
+                    <li data-i18n="form.footer.punto_2">Te redirigimos a WhatsApp con tu consulta</li>
+                    <li data-i18n="form.footer.punto_3">Nuestro guía especialista te responde</li>
+                    <li data-i18n="form.footer.punto_4">¡Confirmamos y a pedalear!</li>
                 </ul>
             </div>
 

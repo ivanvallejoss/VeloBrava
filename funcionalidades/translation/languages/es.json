@@ -1,0 +1,116 @@
+{
+    "hero": {
+        "title": "Costa Brava & Gerona sobre ruedas",
+        "description": "Tour ciclistas únicos guiados por locales que conocen cada rincon",
+        "btn_primario": "Comenzar viaje",
+        "btn_secondary": "Ver Rutas"
+    },
+    "tour": {
+        "title": "Tours Disponibles",
+        "description": "Todos los tours incluyen guía personalizado, asistencia básica, paradas fotográficas y adaptaciones según tu nivel.",
+        "costa_brava": {
+            "title": "Costa Brava Clasica",
+            "price": "desde",
+            "hours": "4 horas",
+            "description": "Ruta ideal para disfrutar del mar Mediterraneo, los acantilados mas espectaculares y los pueblos pesqueros mas bonitos de la Costa Brava.",
+            "btn_primario": "Elegir experiencia",
+            "btn_secondary": "Ḿás info"
+        },
+        "girona_pro": {
+            "title": "Girona Pro Ride",
+            "price": "desde",
+            "hours": "5-6 horas",
+            "description": "Ruta pensada para ciclistas que buscan entrenar duro como los profesionales. Las mismas subidas míticas donde entrenan los equipos WorldTour.",
+            "btn_primario": "Elegir experiencia",
+            "btn_secondary": "Ḿás info"
+        },
+        "relax_gourmet": {
+            "title": "Relax + Gourmet",
+            "price": "desde",
+            "hours": "3 horas",
+            "description": "Recorrido tranquilo por los pueblos medievales de postal con parada gastronomica en masía local. Incluye cata de vinos o comida típica catalana.",
+            "btn_primario": "Elegir experiencia",
+            "btn_secondary": "Ḿás info"
+        },
+        "extras":{
+            "title": "¿No encuentras lo que buscas?",
+            "description": "Creamos tours personalizados adaptados a tu nivel, intereses y disponibilidad. Contáctanos para diseñar tu experiencia perfecta en la Costa Brava.",
+            "btn_primario": "Tour Personalizado."
+        }
+    },
+    "velobrava": {
+        "title": "Somos Velo Brava",
+        "description": "Combinamos juventud y competicion con experiencia y conocimiento profundo del terreno.",
+        "Alejandro": {
+            "age": "38 años",
+            "question_1": "¿Quién soy?",
+            "answer_1": "Con más de dos decadas pedaleando por la Costa Brava conozco cada curva, cada pueblo y cada rincón secreto.",
+            "question_2": "¿Qué Ofrezco?",
+            "answer_2": "rutas tranquilas, cultura, gastronomía y conexión auténtica con el entorno.",
+            "properties_1": "+20 años de experiencia",
+            "properties_2": "rutas culturales",
+            "properties_3": "conocimiento local"
+        },
+        "Roger": {
+            "age": "19 años",
+            "question_1": "¿Quién soy?",
+            "answer_1": "Ciclista compitiendo en el Equipo Finisher (Ken Pharma). He crecido entrenando por las carreteras de Girona y quiero compartir esas vistas y sensaciones contigo.",
+            "question_2": "¿Qué Ofrezco?",
+            "answer_2": "Mostrarte el lado profesional de estas rutas sin perder el enfoque dinámico para adaptarlo a lo que gustes.",
+            "properties_1": "Equipo Ken Pharma",
+            "properties_2": "Competicion",
+            "properties_3": "Rutas Pro"
+        }
+    },
+    "whyUs": {
+        "title": "¿Por qué elegirnos?",
+        "description": "Combinamos juventud y competicion con experiencia y conocimiento profundo del terrreno. Ofrecemos tours unicos, seguros y adaptados a todso los nivels. Ademas de una excelente gama de equipamiento ciclista para que no necesites nada mas que pedalear.",
+        "comment": "\"La costa Brava es una joya ciclista y nosotros te la mostramos como nadie más puede hacerlo.\""
+    },
+    "form": {
+        "title": "Reserva tu experiencia",
+        "description": "Completa el formulario y nos pondremos en contacto contigo por WhatsApp",
+        "name": "Nombre: ",
+        "name_placeholder": "Ej: Maria Gonzalez.",
+        "email_placeholder": "tu@mail.com",
+        "tour": {
+            "title": "¿Qué tour prefieres?",
+            "select": {
+                "costa_brava": "🏖️ Costa Brava Clásica (desde 65€) - 4-5h",
+                "girona_pro": "🏁 Girona Pro Ride (desde 85€) - 5-6h",
+                "relax_gourmet": "🍷 Relax + Gourmet (desde 55€) - 3-4h",
+                "personalizado": "⚙️ Tour Personalizado - A medida"
+            }
+        },
+        "level": {
+            "title": "¿Cuál es tu nivel de ciclismo?",
+            "select": {
+                "title": "-- Niveles --",
+                "principiante": "🟢 Principiante - Rutas tranquilas (3-4h)",
+                "intermedio": "🟡 Intermedio - Algunas subidas (3-5h)",
+                "avanzado": "🟠 Avanzado - Entreno regular (+5h)",
+                "competicion": "🔴 Competición - Rutas exigentes"
+            }
+        },
+        "date": "Fecha de interes",
+        "date_helper": "Si no tienes fecha fija, la coordinaremos por WhatsApp.",
+        "comments": {
+            "title": "💬 Cuéntanos más",
+            "description": "Comentarios o peticiones especiales",
+            "small_description": "Alergias, preferencias, dudas...",
+            "placeholder": "Ej: Soy vegetariano, ¿incluye comida? / Tengo una lesión en la rodilla / Somos un grupo de 6 personas..."
+        },
+        "submit": {
+            "title": "Enviar por WhatsApp",
+            "privacy": "Al enviar, aceptas que contactemos contigo por WhatsApp para gestionar tu reserva.",
+            "small_privacy": "No compartimos tus datos con terceros."
+        },
+        "footer": {
+            "title": "📱 ¿Cómo funciona?",
+            "punto_1": "Completas este formulario.",
+            "punto_2": "Te redirigimos a WhatsApp con tu consulta.",
+            "punto_3": "Nuestro guia especialista te responde",
+            "punto_4": "¡Confirmamos y a pedalear!"
+        }
+    }
+}

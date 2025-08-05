@@ -13,7 +13,6 @@ body{
     font-weight: 400;
     line-height: 1.5;
     overflow-x: hidden;
-    /* background-color: #F9FBFF; */
     background-color: #f2f2f4;
 }
 
@@ -26,7 +25,7 @@ button{
 
 /* 
 
-DOTS
+        DOTS
 
 */
 
@@ -90,7 +89,7 @@ DOTS
 
 /* 
 
-    BARRA DE NAVEGACION
+        BARRA DE NAVEGACION
 
 */
 
@@ -108,7 +107,7 @@ DOTS
     display: flex;
     flex-direction: row;
     align-items:center;
-    justify-content: center;
+    justify-content: space-evenly;
     min-width: 100vw;
     height: 8vh;
 }
@@ -185,6 +184,8 @@ DOTS
     min-width: 80px;
     text-decoration: none;
     color: white;
+    /* LINEA A CHEQUEAR UNA VEZ QUE SALE A PRODUCCION */
+    padding: auto 50%;
 }
 
 .hero_btn a:visited{
