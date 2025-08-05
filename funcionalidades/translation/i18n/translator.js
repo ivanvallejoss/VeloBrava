@@ -17,7 +17,7 @@ class Translator {
      * se configura el selector de idioma.
      * se aplican las traducciones
      */
-    async inicilizar(){
+    async inicializar(){
         console.log('Inicializando sistema de traduccion..')
 
         this.idiomaActual = this.detectarIdioma();
@@ -359,37 +359,11 @@ class Translator {
 // Instancia global del translator.
 const translator = new Translator();
 
-// Exportar funciones principales
-export async function inicializarI18n(){
-    await translator.inicilizar();
-}
-
-export function cambiarIdioma(idioma){
-    return translator.cambiarIdioma(idioma);
-}
-
-export function t(clave, variables = {}){
-    return translator,obtenerTraduccion(clave, variables);
-}
-
-export function getIdiomaActual(){
-    return translator.getIdiomaActual();
-}
-
-export function aplicarTraducciones(){
-    translator.aplicarTraducciones();
-}
-
-/**
- * Funcion de incializacion simple para app.js
- */
-
 export function inicializarTranslation(){
-    console.log(`Inicializando sistema de traduccion...`);
 
-    inicializarI18n().catch(error => {
-        console.error('error inicializando traducciones: ', error);
-    });
+    translator.inicializar().catch(error => {
+        console.error('Error inicializando traducciones: ', error);
+    })
 
-    console.log(`Translation inicializado.`);
+    console.log('Translation inicializada')
 }
