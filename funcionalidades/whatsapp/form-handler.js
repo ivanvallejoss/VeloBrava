@@ -5,6 +5,7 @@ import { generateFormMessage, generateConfirmationMessage, generateSuccessMessag
 import { selectGuide } from "./config.js";;
 import {validarFormularioWhatsApp} from '../shared/validators.js';
 import {mostrarNotification} from '../shared/notification.js';
+import { openWhatsAppSecurely } from "./security.js";
 
 /**
 
@@ -61,7 +62,7 @@ export function handleFormSubmit(event){
 
         if (confirm(confirmMessage)){
             // Abrir whatsapp
-            window.location.href = whatsappURL;
+            openWhatsAppSecurely(whatsappURL)
 
             // Resetear formulario
             form.reset()
@@ -109,7 +110,7 @@ export function handleQuickButton(event){
         const whatsappURL = generateWhatsAppURL(guide.phone, message);
 
         // Abrir whatsApp directamente (sin confirmation para botones rapidos)
-        window.location.href = whatsappURL;
+        openWhatsAppSecurely(whatsappURL)
 
         // Mostrar notificacion de exito
         mostrarNotification(`Abriendo WhatsApp para consulta sobre`, 'success', 3000);
