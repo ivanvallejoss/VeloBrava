@@ -266,12 +266,14 @@ button{
 .card{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    justify-content: center;
     margin: 10px 0.5em;
     background-color: #f2f2f2;
     box-shadow: 0 2px 10px rgba(37, 99, 235, 0.4);
     border-radius: 20px;
-    height: 70vh;
 }
+
 
 #costa_brava_clasica{
     background: url(./assets/rutas/ruta-costera.jpg);
@@ -289,7 +291,7 @@ button{
 }
 
 .card_img{
-    height: 50%;
+    height: 40vh;
     min-width: 100%;
     border-radius: 20px 20px 0px 0px;
 }
@@ -333,6 +335,98 @@ button{
     text-align: center;
     color: rgb(88, 88, 88);
 }
+
+
+
+/* 
+
+
+NUEVAS CARDS
+
+
+
+*/
+
+
+.pre-toggle{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 90%;
+}
+
+.pre-toggle p{
+    color: black;
+    font-size: 0.8em;
+}
+
+.accordion-toggle{
+    /* width: 100%; */
+    padding: 12px;
+    background-color: #f1f5f9;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: rgb(88, 88, 88);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.accordion-toggle:hover{
+    background-color: #e2e8f0;
+}
+
+.accordion-toggle.active{
+    background-color: rgba(37, 99, 235, 0.4);
+    color: white;
+}
+
+.toggle-icon{
+    transition: transform 0.3s ease;
+}
+
+.accordion-toggle.active .toggle-icon{
+    transform: rotate(180deg);
+}
+
+.accordion_content{
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transform: max-height 0.3s ease;
+    padding: 0 24px 24px;
+}
+
+.accordion_content.active{
+    max-height: 100%;
+    padding: 0 24px 24px;
+}
+
+.tour_description{
+    color: #475569;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.tour_services{
+    background-color: #f8fafc;
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 4px solid #2563eb;
+}
+
+
+
+
+
+
+
+
 
 .card_description p{
     font-weight: 400;
