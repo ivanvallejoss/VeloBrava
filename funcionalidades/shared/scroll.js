@@ -6,7 +6,7 @@ export function inicializarScrollSmooth(){
         // Detectar si el navegador soporta scroll suave native bien
         const supportsNativeSmooth = `scrollBehavior` in document.documentElement.style;
 
-        document.querySelectorAll('a[href^="#"]').forEach(enlace => {
+        document.querySelectorAll('button[href^="#"]').forEach(enlace => {
             enlace.addEventListener('click', function(e) {
                 e.preventDefault();
 

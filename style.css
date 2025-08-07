@@ -179,19 +179,6 @@ button{
     border-radius: 20px;
 }
 
-.hero_btn a{
-    min-height: 40px;
-    min-width: 80px;
-    text-decoration: none;
-    color: white;
-    /* LINEA A CHEQUEAR UNA VEZ QUE SALE A PRODUCCION */
-    padding: auto 50%;
-}
-
-.hero_btn a:visited{
-    color: white;
-}
-
 .hero_btn button{
     background: linear-gradient(rgba(0, 0, 0, 0.2));
     border: none;
