@@ -1,7 +1,7 @@
-// MODULO DE ACORDEON PARA TOURS
+/// MODULO DE ACORDEON PARA TOURS - VERSIÓN MEJORADA
 
 /**
- * Gestiona los acordeones de las cards tours
+ * Gestiona los acordeones de las cards tours con transiciones CSS suaves
  */
 class AccordionManager{
     constructor() {
@@ -14,7 +14,6 @@ class AccordionManager{
      * Inicializar todos los acordeones en la página
      */
     inicializar() {
-        console.log('🎯 Inicializando acordeones de tours...');
         
         // Buscar todos los toggles de acordeón
         const toggles = document.querySelectorAll('.accordion-toggle');
@@ -87,22 +86,21 @@ class AccordionManager{
      * @param {Object} accordionData - Datos del acordeón
      */
     toggleAcordeon(accordionData) {
-        const { toggle, content, isOpen, index } = accordionData;
+        const { isOpen, index } = accordionData;
         
         console.log(`🔄 Toggle acordeón ${index}: ${isOpen ? 'cerrando' : 'abriendo'}`);
 
         if (isOpen) {
             this.cerrarAcordeon(accordionData);
         } else {
-            // Cerrar todos los otros acordeones primero
+            // Cerrar todos los otros acordeones primero si quieres comportamiento exclusivo
             // this.cerrarTodosExcepto(accordionData);
-            // Abrir este acordeón
             this.abrirAcordeon(accordionData);
         }
     }
 
     /**
-     * Abrir un acordeón
+     * Abrir un acordeón con altura calculada dinámicamente
      * @param {Object} accordionData - Datos del acordeón
      */
     abrirAcordeon(accordionData) {
@@ -112,28 +110,46 @@ class AccordionManager{
         accordionData.isOpen = true;
         this.activeAccordion = accordionData;
 
-        // Clases CSS
+        // Preparar para medición
+        content.style.display = 'block';
+        content.style.maxHeight = 'none';
+        content.style.overflow = 'hidden';
+        
+        // Medir altura real del contenido
+        const height = content.scrollHeight;
+        
+        // Resetear para animación
+        content.style.maxHeight = '0';
+        content.style.padding = '0 24px';
+        
+        // Trigger reflow para asegurar que el cambio se aplique
+        content.offsetHeight;
+        
+        // Activar clases CSS
         toggle.classList.add('active');
         content.classList.add('active');
         tourCard?.classList.add('expanded');
-        content.style.display = 'block';
+
+        // Animar a la altura calculada
+        content.style.maxHeight = height + 'px';
+        content.style.padding = '0 24px 24px';
 
         // Accesibilidad
         toggle.setAttribute('aria-expanded', 'true');
         content.setAttribute('aria-hidden', 'false');
 
-        // Actualizar texto del toggle (si es necesario)
+        // Actualizar texto del toggle
         const toggleText = toggle.querySelector('.toggle-text');
         if (toggleText) {
-            // Si tienes sistema de traducción, usar esa clave
             toggleText.textContent = 'Ocultar detalles';
         }
 
-        // Scroll suave al acordeón si es necesario
-        // this.scrollToAccordionIfNeeded(accordionData);
-
-        // Event personalizado para integración con otros sistemas
-        // this.emitirEventoAcordeon('opened', accordionData);
+        // Después de la animación, permitir altura automática para contenido dinámico
+        setTimeout(() => {
+            if (accordionData.isOpen) { // Solo si sigue abierto
+                content.style.maxHeight = 'none';
+            }
+        }, this.animationDuration);
     }
 
     /**
@@ -152,11 +168,35 @@ class AccordionManager{
             this.activeAccordion = null;
         }
 
-        // Clases CSS
+        if (animate) {
+            // Para animación suave de cierre, primero fijamos la altura actual
+            const currentHeight = content.scrollHeight;
+            content.style.maxHeight = currentHeight + 'px';
+            
+            // Trigger reflow
+            content.offsetHeight;
+            
+            // Animar a cerrado
+            content.style.maxHeight = '0';
+            content.style.padding = '0 24px';
+            
+            // Después de la animación, ocultar completamente
+            setTimeout(() => {
+                if (!accordionData.isOpen) { // Solo si sigue cerrado
+                    content.style.display = 'none';
+                }
+            }, this.animationDuration);
+        } else {
+            // Cierre inmediato para inicialización
+            content.style.display = 'none';
+            content.style.maxHeight = '0';
+            content.style.padding = '0 24px';
+        }
+
+        // Remover clases CSS
         toggle.classList.remove('active');
         content.classList.remove('active');
         tourCard?.classList.remove('expanded');
-        content.style.display = 'none';
 
         // Accesibilidad
         toggle.setAttribute('aria-expanded', 'false');
@@ -167,11 +207,18 @@ class AccordionManager{
         if (toggleText) {
             toggleText.textContent = 'Ver itinerario y servicios';
         }
+    }
 
-        // Event personalizado
-        // if (animate) {
-        //     this.emitirEventoAcordeon('closed', accordionData);
-        // }
+    /**
+     * Cerrar todos los acordeones excepto uno específico
+     * @param {Object} exceptAccordion - Acordeón que NO debe cerrarse
+     */
+    cerrarTodosExcepto(exceptAccordion) {
+        this.accordions.forEach(accordion => {
+            if (accordion !== exceptAccordion && accordion.isOpen) {
+                this.cerrarAcordeon(accordion);
+            }
+        });
     }
 
     /**
@@ -190,14 +237,24 @@ class AccordionManager{
             this.actualizarTraducciones();
         });
     }
-}
 
+    /**
+     * Destruir acordeones y limpiar eventos
+     */
+    destruir() {
+        this.accordions.forEach(accordion => {
+            accordion.toggle.removeEventListener('click', this.toggleAcordeon);
+        });
+        this.accordions = [];
+        this.activeAccordion = null;
+    }
+}
 
 // Instancia global del manager
 const accordionManager = new AccordionManager();
 
 /**
- * Función de inicialización para main.js
+ * Función de inicialización para app.js
  */
 export function inicializarAcordeones() {
     console.log('🎯 Inicializando módulo de acordeones...');
@@ -212,4 +269,9 @@ export function inicializarAcordeones() {
     }
     
     console.log('✅ Módulo de acordeones configurado');
+}
+
+// Exponer manager para debugging en desarrollo
+if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    window.AccordionManager = accordionManager;
 }

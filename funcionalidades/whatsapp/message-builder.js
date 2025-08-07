@@ -1,6 +1,6 @@
 // CONSTRUCCION DE MENSAJES ESPECIFICOS.
 
-import {TOURS_CONFIG, LEVELS_CONFIG, COMPANY_CONFIG} from './config.js';
+import {TOURS_CONFIG, LEVELS_CONFIG, COMPANY_CONFIG} from '../shared/config.js';
 
 /** 
 *

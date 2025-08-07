@@ -22,7 +22,7 @@ class App{
     configurarModulos(){
         try{
             inicializarCardSlider();
-            // inicializarTranslation();
+            inicializarTranslation();
             inicializarAcordeones();
             inicializarNotifications();
             inicializarWhatsapp();

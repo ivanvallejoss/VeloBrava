@@ -338,31 +338,23 @@ button{
 
 
 
-/* 
+/* ESTILOS PARA ACORDEONES MEJORADOS */
 
-
-NUEVAS CARDS
-
-
-
-*/
-
-
-.pre-toggle{
+.pre-toggle {
     display: flex;
     flex-direction: column;
-    height: 100px;
-    width: 90%;
+    margin-bottom: 10px;
 }
 
-.pre-toggle p{
+.pre-toggle p {
     color: black;
     font-size: 0.8em;
+    margin-bottom: 12px;
+    line-height: 1.4;
 }
 
-.accordion-toggle{
-    /* width: 100%; */
-    padding: 12px;
+.accordion-toggle {
+    padding: 12px 16px;
     background-color: #f1f5f9;
     border: none;
     border-radius: 10px;
@@ -371,62 +363,167 @@ NUEVAS CARDS
     align-items: center;
     justify-content: center;
     gap: 8px;
-    color: rgb(88, 88, 88);
+    color: #64748b;
     font-weight: 500;
+    font-size: 0.9em;
     transition: all 0.3s ease;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
-.accordion-toggle:hover{
+.accordion-toggle:hover {
     background-color: #e2e8f0;
+    color: #475569;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.accordion-toggle.active{
-    background-color: rgba(37, 99, 235, 0.4);
+.accordion-toggle.active {
+    background-color: #2563eb;
     color: white;
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
 }
 
-.toggle-icon{
+.accordion-toggle.active:hover {
+    background-color: #1d4ed8;
+}
+
+.toggle-icon {
     transition: transform 0.3s ease;
+    font-size: 0.8em;
 }
 
-.accordion-toggle.active .toggle-icon{
+.accordion-toggle.active .toggle-icon {
     transform: rotate(180deg);
 }
 
-.accordion_content{
+/* CONTENIDO DEL ACORDEÓN */
+.accordion_content {
+    /* Estado inicial: cerrado */
     display: none;
     max-height: 0;
     overflow: hidden;
-    transform: max-height 0.3s ease;
-    padding: 0 24px 24px;
+    padding: 0 24px;
+    
+    /* Transiciones suaves */
+    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                padding 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.2s ease;
+    
+    /* Mejoras visuales */
+    opacity: 0;
+    transform: translateY(-4px);
 }
 
-.accordion_content.active{
-    max-height: 100%;
-    padding: 0 24px 24px;
+.accordion_content.active {
+    /* Estado abierto se maneja por JS para altura dinámica */
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.tour_description{
+/* CONTENIDO DENTRO DEL ACORDEÓN */
+.tour_description {
     color: #475569;
     line-height: 1.6;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
 }
 
-.tour_services{
+.tour_description strong {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.tour_services {
     background-color: #f8fafc;
     padding: 16px;
     border-radius: 8px;
     border-left: 4px solid #2563eb;
 }
 
+.tour_services__title {
+    display: block;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 12px;
+    font-size: 0.9em;
+}
+
+.tour_services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tour_services li {
+    padding: 4px 0;
+    font-size: 0.85em;
+    color: #475569;
+    position: relative;
+    padding-left: 16px;
+}
+
+.tour_services li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+}
+
+/* RESPONSIVE IMPROVEMENTS */
+@media (max-width: 768px) {
+    .accordion-toggle {
+        padding: 10px 12px;
+        font-size: 0.85em;
+    }
+    
+    .accordion_content {
+        padding: 0 16px;
+    }
+    
+    .tour_description {
+        font-size: 0.85em;
+    }
+    
+    .tour_services {
+        padding: 12px;
+    }
+}
+
+/* ANIMACIÓN MEJORADA PARA CARDS EXPANDIDAS */
+.card.expanded {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
+}
+
+/* LOADING STATE (OPCIONAL) */
+.accordion_content.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.accordion_content.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #e2e8f0;
+    border-top: 2px solid #2563eb;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 
 
-
-
-
-
-
+/* FIN */
 
 .card_description p{
     font-weight: 400;

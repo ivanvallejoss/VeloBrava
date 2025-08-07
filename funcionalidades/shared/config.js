@@ -81,7 +81,7 @@ export const COMPANY_CONFIG = {
     location: 'Costa Brava, Spain'
 };
 
-/*
+/**
 
 Determina el guia indicado segun el tour seleccionado
 

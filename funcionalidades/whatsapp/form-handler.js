@@ -2,7 +2,7 @@
 
 import { generateWhatsAppURL} from "./encoder.js";
 import { generateFormMessage, generateConfirmationMessage, generateSuccessMessage, generateQuickMessage} from "./message-builder.js";
-import { selectGuide } from "./config.js";;
+import { selectGuide } from "../shared/config.js";;
 import {validarFormularioWhatsApp} from '../shared/validators.js';
 import {mostrarNotification} from '../shared/notification.js';
 import { openWhatsAppSecurely } from "./security.js";
