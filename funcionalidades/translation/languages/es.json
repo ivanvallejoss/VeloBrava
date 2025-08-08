@@ -32,6 +32,10 @@
             "btn_primario": "Elegir experiencia",
             "btn_secondary": "Ḿás info"
         },
+        "accordion": {
+            "show": "Ver más información",
+            "hide": "Ocultar detalles"
+        },
         "extras":{
             "title": "¿No encuentras lo que buscas?",
             "description": "Creamos tours personalizados adaptados a tu nivel, intereses y disponibilidad. Contáctanos para diseñar tu experiencia perfecta en la Costa Brava.",
@@ -86,10 +90,10 @@
             "title": "¿Cuál es tu nivel de ciclismo?",
             "select": {
                 "title": "-- Niveles --",
-                "principiante": "🟢 Principiante - Rutas tranquilas (3-4h)",
-                "intermedio": "🟡 Intermedio - Algunas subidas (3-5h)",
-                "avanzado": "🟠 Avanzado - Entreno regular (+5h)",
-                "competicion": "🔴 Competición - Rutas exigentes"
+                "principiante": "🟢 Principiante ",
+                "intermedio": "🟡 Intermedio ",
+                "avanzado": "🟠 Avanzado ",
+                "competicion": "🔴 Competición"
             }
         },
         "date": "Fecha de interes",
