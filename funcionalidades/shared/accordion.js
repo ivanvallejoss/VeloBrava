@@ -203,9 +203,10 @@ class AccordionManager{
         content.setAttribute('aria-hidden', 'true');
 
         // Actualizar texto del toggle
-        const toggleText = toggle.querySelector('.toggle-text');
-        if (toggleText) {
-            toggleText.textContent = 'Ver itinerario y servicios';
+        const toggleText = toggle.querySelector('toggle-text');
+        if(toggleText){
+            toggleText.setAttribute('data-i18n', 'accordion.show');
+            toggleText.textContent = 'Ver más información';
         }
     }
 

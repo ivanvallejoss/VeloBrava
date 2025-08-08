@@ -277,6 +277,12 @@ button{
     background-size: cover;
 }
 
+#training_camp{
+    background: url(./assets/rutas/training-camp.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
 .card_img{
     height: 40vh;
     min-width: 100%;
@@ -330,6 +336,7 @@ button{
 .pre-toggle {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-bottom: 10px;
 }
 
@@ -343,6 +350,7 @@ button{
 .accordion-toggle {
     padding: 12px 16px;
     background-color: #f1f5f9;
+    width: 90%;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -549,7 +557,6 @@ button{
     width: 85%;
     box-shadow: 0 2px 10px rgba(37, 99, 235, 0.4);
 }
-
 
 
 /* 

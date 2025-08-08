@@ -5,7 +5,6 @@ import { inicializarCardSlider } from './funcionalidades/shared/animation.js';
 import { inicializarTranslation } from './funcionalidades/translation/i18n/translator.js';
 import { inicializarAcordeones } from './funcionalidades/shared/accordion.js';
 
-
 class App{
     constructor(){
         this.inicializar();
