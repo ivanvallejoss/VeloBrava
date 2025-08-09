@@ -1,70 +1,168 @@
 {
-    "hero": {
-        "title": "Costa Brava & Gerona sobre ruedas",
-        "description": "Tour ciclistas únicos guiados por locales que conocen cada rincon",
-        "btn_primario": "Comenzar viaje",
-        "btn_secondary": "Ver Rutas"
-    },
-    "tour": {
-        "title": "Tours Disponibles",
-        "description": "Todos los tours incluyen guía personalizado, asistencia básica, paradas fotográficas y adaptaciones según tu nivel.",
-        "costa_brava": {
-            "title": "Costa Brava Clasica",
-            "price": "desde",
-            "hours": "4 horas",
-            "description": "Ruta ideal para disfrutar del mar Mediterraneo, los acantilados mas espectaculares y los pueblos pesqueros mas bonitos de la Costa Brava.",
-            "btn_primario": "Elegir experiencia",
-            "btn_secondary": "Ḿás info"
-        },
-        "girona_pro": {
-            "title": "Girona Pro Ride",
-            "price": "desde",
-            "hours": "5-6 horas",
-            "description": "Ruta pensada para ciclistas que buscan entrenar duro como los profesionales. Las mismas subidas míticas donde entrenan los equipos WorldTour.",
-            "btn_primario": "Elegir experiencia",
-            "btn_secondary": "Ḿás info"
-        },
-        "relax_gourmet": {
-            "title": "Relax + Gourmet",
-            "price": "desde",
-            "hours": "3 horas",
-            "description": "Recorrido tranquilo por los pueblos medievales de postal con parada gastronomica en masía local. Incluye cata de vinos o comida típica catalana.",
-            "btn_primario": "Elegir experiencia",
-            "btn_secondary": "Ḿás info"
-        },
-        "extras":{
-            "title": "¿No encuentras lo que buscas?",
-            "description": "Creamos tours personalizados adaptados a tu nivel, intereses y disponibilidad. Contáctanos para diseñar tu experiencia perfecta en la Costa Brava.",
-            "btn_primario": "Tour Personalizado."
-        }
-    },
-    "velobrava": {
-        "title": "Somos Velo Brava",
-        "description": "Combinamos juventud y competicion con experiencia y conocimiento profundo del terreno.",
-        "Alejandro": {
-            "age": "38 años",
-            "question_1": "¿Quién soy?",
-            "answer_1": "Con más de dos decadas pedaleando por la Costa Brava conozco cada curva, cada pueblo y cada rincón secreto.",
-            "question_2": "¿Qué Ofrezco?",
-            "answer_2": "rutas tranquilas, cultura, gastronomía y conexión auténtica con el entorno.",
-            "properties_1": "+20 años de experiencia",
-            "properties_2": "rutas culturales",
-            "properties_3": "conocimiento local"
-        },
-        "Roger": {
-            "age": "19 años",
-            "question_1": "¿Quién soy?",
-            "answer_1": "Ciclista compitiendo en el Equipo Finisher (Ken Pharma). He crecido entrenando por las carreteras de Girona y quiero compartir esas vistas y sensaciones contigo.",
-            "question_2": "¿Qué Ofrezco?",
-            "answer_2": "Mostrarte el lado profesional de estas rutas sin perder el enfoque dinámico para adaptarlo a lo que gustes.",
-            "properties_1": "Equipo Ken Pharma",
-            "properties_2": "Competicion",
-            "properties_3": "Rutas Pro"
-        }
-    },
-    "whyUs": {
-        "title": "¿Por qué elegirnos?",
-        "description": "Combinamos juventud y competicion con experiencia y conocimiento profundo del terrreno. Ofrecemos tours unicos, seguros y adaptados a todso los nivels. Ademas de una excelente gama de equipamiento ciclista para que no necesites nada mas que pedalear.",
-        "comment": "\"La costa Brava es una joya ciclista y nosotros te la mostramos como nadie más puede hacerlo.\""
-    }
+   "hero": {
+       "title": "Costa Brava & Girona on Wheels",
+       "description": "Unique cycling tours guided by locals who know every corner",
+       "btn_primario": "Start Journey",
+       "btn_secondary": "View Routes"
+   },
+   "tour": {
+       "title": "Available Experiences",
+       "description": "Cycling experiences adapted to all levels combined with unforgettable landscapes, places and food. Each package is a unique experience designed just for you.",
+       "costa_brava": {
+           "title": "Classic Costa Brava",
+           "price": "from",
+           "pre_toggle": "Ideal route to enjoy the Mediterranean sea, the most spectacular cliffs and the most beautiful fishing villages of the Costa Brava.",
+           "accordion": {
+               "strong": "Explore the essence of Costa Brava",
+               "span": "in this experience combining spectacular coastal routes with medieval villages. Pedal along paths that connect crystal-clear coves, dramatic cliffs and authentic fishing villages."
+           }
+       },
+       "girona_pro": {
+           "title": "Girona Pro Ride",
+           "pre_toggle": "Route designed for cyclists looking to train hard like the professionals. The same legendary climbs where WorldTour teams train.",
+           "accordion": {
+               "strong": "Explore the essence of Costa Brava",
+               "span": "in this experience combining spectacular coastal routes with medieval villages. Pedal along paths that connect crystal-clear coves, dramatic cliffs and authentic fishing villages."
+           }
+       },
+       "relax_gourmet": {
+           "title": "Relax + Gourmet",
+           "pre_toggle": "Leisurely ride through postcard-perfect medieval villages with gourmet stop at a local farmhouse. Includes wine tasting or traditional Catalan food.",
+           "accordion": {
+               "strong": "Explore the essence of Costa Brava",
+               "span": "in this experience combining spectacular coastal routes with medieval villages. Pedal along paths that connect crystal-clear coves, dramatic cliffs and authentic fishing villages."
+           }
+       },
+       "training_camp": {
+           "title": "Costa Brava Training Camp",
+           "pre_toggle": "High-performance training, sports nutrition and clinical testing to unlock your maximum cycling potential",
+           "accordion": {
+               "strong": "Explore the essence of Costa Brava",
+               "span": "in this experience combining spectacular coastal routes with medieval villages. Pedal along paths that connect crystal-clear coves, dramatic cliffs and authentic fishing villages."
+           },
+           "list": {
+               "title": "What's included?",
+               "strong1": "🚴‍♂️ Guided rides",
+               "l1": " on iconic roads and landscapes of Costa Brava and Catalan Pyrenees",
+               "strong2": "🥗 Sports nutrition:",
+               "l2": " learn to fuel, train and recover like a professional.",
+               "strong3": "🧪 Lactate testing:",
+               "l3": " we help determine your threshold and precise training zones with scientific accuracy.",
+               "strong4": "📈 Metabolism testing:",
+               "l4": " Understand your energy expenditure for optimal personalization of your fueling strategy",
+               "strong5": "🔥 Personalized training:",
+               "l5": " training and nutrition plans tailored to your results."
+           },
+           "benefits": {
+               "title": "Benefits",
+               "l1": "We boost your performance with science-based training.",
+               "l2": "Learn fueling and recovery strategies to compete and improve your endurance.",
+               "l3": "Train in one of the world's best cycling destinations.",
+               "l4": "Combine sport, learning and unforgettable travel experiences."
+           }
+       },
+       "shared": {
+           "price": "from",
+           "btn_primario": "Book Experience",
+           "accordion": {
+               "show": "See more information.",
+               "hide": "Hide information"
+           },
+           "services": {
+                   "title": "Included Services",
+                   "l1": "Hotel accommodation per night",
+                   "l2": "Bicycle or e-bike ($)",
+                   "l3": "Breakfast & Dinner (local delicacies).",
+                   "l4": "Professional guides.",
+                   "l5": "Support vehicle on all routes.",
+                   "l6": "GPS navigation.",
+                   "l7": "Professional equipment ($)",
+                   "l8": "24/7 assistance"
+           }
+       },
+       "accordion": {
+           "show": "See more information",
+           "hide": "Hide details"
+       },
+       "extras":{
+           "title": "Can't find what you're looking for?",
+           "description": "We create custom tours adapted to your level, interests and availability. Contact us to design your perfect Costa Brava experience.",
+           "btn_primario": "Custom Tour."
+       }
+   },
+   "velobrava": {
+       "title": "We are Velo Brava",
+       "description": "We combine youth and competition with experience and deep knowledge of the terrain.",
+       "Alejandro": {
+           "age": "38 years old",
+           "question_1": "Who am I?",
+           "answer_1": "With more than two decades cycling through Costa Brava, I know every curve, every village and every secret corner.",
+           "question_2": "What do I offer?",
+           "answer_2": "leisurely routes, culture, gastronomy and authentic connection with the environment.",
+           "properties_1": "+20 years of experience",
+           "properties_2": "cultural routes",
+           "properties_3": "local knowledge"
+       },
+       "Roger": {
+           "age": "19 years old",
+           "question_1": "Who am I?",
+           "answer_1": "Cyclist competing on Team Finisher (Ken Pharma). I've grown up training on Girona's roads and want to share those views and sensations with you.",
+           "question_2": "What do I offer?",
+           "answer_2": "Show you the professional side of these routes without losing the dynamic approach to adapt it to whatever you like.",
+           "properties_1": "Ken Pharma Team",
+           "properties_2": "Competition",
+           "properties_3": "Pro Routes"
+       }
+   },
+   "whyUs": {
+       "title": "Why choose us?",
+       "description": "We combine youth and competition with experience and deep knowledge of the terrain. We offer unique, safe tours adapted to all levels. Plus an excellent range of cycling equipment so you need nothing more than to pedal.",
+       "comment": "\"Costa Brava is a cycling gem and we show it to you like no one else can.\""
+   },
+   "form": {
+       "title": "Book your experience",
+       "description": "Fill out the form and we'll contact you via WhatsApp",
+       "name": "Name: ",
+       "name_placeholder": "Ex: Maria Gonzalez.",
+       "email_placeholder": "your@mail.com",
+       "tour": {
+           "title": "Which tour do you prefer?",
+           "select": {
+               "costa_brava": "Classic Costa Brava",
+               "girona_pro": "Girona Pro Ride",
+               "relax_gourmet": "Relax + Gourmet",
+               "personalizado": "Custom Tour - Tailor-made"
+           }
+       },
+       "level": {
+           "title": "What's your cycling level?",
+           "select": {
+               "title": "-- Levels --",
+               "principiante": "🟢 Beginner ",
+               "intermedio": "🟡 Intermediate ",
+               "avanzado": "🟠 Advanced ",
+               "competicion": "🔴 Competition"
+           }
+       },
+       "date": "Date of interest",
+       "date_helper": "If you don't have a fixed date, we'll coordinate via WhatsApp.",
+       "comments": {
+           "title": "💬 Tell us more",
+           "description": "Comments or special requests",
+           "small_description": "Allergies, preferences, questions...",
+           "placeholder": "Ex: I'm vegetarian, does it include food? / I have a knee injury / We're a group of 6 people..."
+       },
+       "submit": {
+           "title": "Send via WhatsApp",
+           "privacy": "By submitting, you agree to us contacting you via WhatsApp to manage your booking.",
+           "small_privacy": "We don't share your data with third parties."
+       },
+       "footer": {
+           "title": "📱 How does it work?",
+           "punto_1": "You fill out this form.",
+           "punto_2": "We redirect you to WhatsApp with your inquiry.",
+           "punto_3": "Our specialist guide responds to you",
+           "punto_4": "We confirm and let's ride!"
+       }
+   }
 }

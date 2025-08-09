@@ -6,31 +6,79 @@
         "btn_secondary": "Ver Rutas"
     },
     "tour": {
-        "title": "Tours Disponibles",
-        "description": "Todos los tours incluyen guía personalizado, asistencia básica, paradas fotográficas y adaptaciones según tu nivel.",
+        "title": "Experiencias disponibles",
+        "description": "Experiencia ciclista adaptada a todos los niveles sumado a los inolvidables paisajes, lugares y comidas. Cada paquete es una experiencia única que se diseña a tu medida.",
         "costa_brava": {
             "title": "Costa Brava Clasica",
             "price": "desde",
-            "hours": "4 horas",
-            "description": "Ruta ideal para disfrutar del mar Mediterraneo, los acantilados mas espectaculares y los pueblos pesqueros mas bonitos de la Costa Brava.",
-            "btn_primario": "Elegir experiencia",
-            "btn_secondary": "Ḿás info"
+            "pre_toggle": "Ruta ideal para disfrutar del mar Mediterraneo, los acantilados mas espectaculares y los pueblos pesqueros mas bonitos de la Costa Brava.",
+            "accordion": {
+                "strong": "Explora la esencia de la Costa Brava",
+                "span": "en esta experiencia combinando rutas costeras espectaculares con pueblos medievales. Pedalea por senderos que conectan calas cristalinas, acantilados dramáticos y pueblos pesqueros auténticos."
+            }
         },
         "girona_pro": {
             "title": "Girona Pro Ride",
-            "price": "desde",
-            "hours": "5-6 horas",
-            "description": "Ruta pensada para ciclistas que buscan entrenar duro como los profesionales. Las mismas subidas míticas donde entrenan los equipos WorldTour.",
-            "btn_primario": "Elegir experiencia",
-            "btn_secondary": "Ḿás info"
+            "pre_toggle": "Ruta pensada para ciclistas que buscan entrenar duro como los profesionales. Las mismas subidas míticas donde entrenan los equipos WorldTour.",
+            "accordion": {
+                "strong": "Explora la esencia de la Costa Brava",
+                "span": "en esta experiencia combinando rutas costeras espectaculares con pueblos medievales. Pedalea por senderos que conectan calas cristalinas, acantilados dramáticos y pueblos pesqueros auténticos."
+            }
         },
         "relax_gourmet": {
             "title": "Relax + Gourmet",
+            "pre_toggle": "Recorrido tranquilo por los pueblos medievales de postal con parada gastronomica en masía local. Incluye cata de vinos o comida típica catalana.",
+            "accordion": {
+                "strong": "Explora la esencia de la Costa Brava",
+                "span": "en esta experiencia combinando rutas costeras espectaculares con pueblos medievales. Pedalea por senderos que conectan calas cristalinas, acantilados dramáticos y pueblos pesqueros auténticos."
+            }
+        },
+        "training_camp": {
+            "title": "Training Camp Costa Brava",
+            "pre_toggle": "Entrenamiento de alto rendimiento, nutrición deportiva y, exámenes clínicos para sacar tu mayor potencial ciclista",
+            "accordion": {
+                "strong": "Explora la esencia de la Costa Brava",
+                "span": "en esta experiencia combinando rutas costeras espectaculares con pueblos medievales. Pedalea por senderos que conectan calas cristalinas, acantilados dramáticos y pueblos pesqueros auténticos."
+            },
+            "list": {
+                "title": "¿Qué incluye?",
+                "strong1": "🚴‍♂️ Salidas guiadas",
+                "l1":" por carreteras icónicas y paisajes de la Costa Brava y Pirineos catalanes",
+                "strong2": "🥗 Nutricion deportiva:",
+                "l2":" aprende a alimentarte, entrenar y recuperarte como un profesional.",
+                "strong3": "🧪 Test de Lactato:",
+                "l3":" ayudamos a determinar tu umbral y zonas de entrenamiento precisas con exactitud científica.",
+                "strong4": "📈 Test de metabolismo:",
+                "l4":" Comprende tu gasto energético para una óptima personalización en tu estrategia de alimentación",
+                "strong5": "🔥 Entrenamiento personalizado:",
+                "l5":" planes de entrenamiento y nutrición adaptados a tus resultados."
+            },
+            "benefits": {
+                "title": "Beneficios",
+                "l1": "Potenciamos tu rendimiento con entrenamiento basado en ciencia.",
+                "l2": "Aprende estrategias de alimentacion y recuperacion para competir y mejorar tu resistencia.",
+                "l3": "Entrena en uno de los mejores destinos ciclistas del mundo.",
+                "l4": "Combina deporte, aprendizaje y experiencias de viaje inolvidables."
+            }
+        },
+        "shared": {
             "price": "desde",
-            "hours": "3 horas",
-            "description": "Recorrido tranquilo por los pueblos medievales de postal con parada gastronomica en masía local. Incluye cata de vinos o comida típica catalana.",
-            "btn_primario": "Elegir experiencia",
-            "btn_secondary": "Ḿás info"
+            "btn_primario": "Reservar experiencia",
+            "accordion": {
+                "show": "Ver más información.",
+                "hide": "Ocultar información"
+            },
+            "services": {
+                    "title": "Servicios incluídos",
+                    "l1": "Hotel por cada noche",
+                    "l2": "Bicileta o e-bike ($)",
+                    "l3": "Desayuno & Cena (delicias locales).",
+                    "l4": "Guías profesionales.",
+                    "l5": "Vehículo de soporte en todas las rutas.",
+                    "l6": "Navegación GPS.",
+                    "l7": "Equipamiento profesional ($)",
+                    "l8": "Asistencia 24/7"
+            }
         },
         "accordion": {
             "show": "Ver más información",
@@ -80,10 +128,10 @@
         "tour": {
             "title": "¿Qué tour prefieres?",
             "select": {
-                "costa_brava": "🏖️ Costa Brava Clásica (desde 65€) - 4-5h",
-                "girona_pro": "🏁 Girona Pro Ride (desde 85€) - 5-6h",
-                "relax_gourmet": "🍷 Relax + Gourmet (desde 55€) - 3-4h",
-                "personalizado": "⚙️ Tour Personalizado - A medida"
+                "costa_brava": "Costa Brava Clásica",
+                "girona_pro": "Girona Pro Ride ",
+                "relax_gourmet": "Relax + Gourmet",
+                "personalizado": "Tour Personalizado - A medida"
             }
         },
         "level": {

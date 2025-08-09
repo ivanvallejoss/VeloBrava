@@ -430,6 +430,11 @@ button{
     font-weight: 600;
 }
 
+.tour_description #training__noList{
+    list-style: none;
+}
+
+
 .tour_services {
     background-color: #f8fafc;
     padding: 16px;
