@@ -17,6 +17,10 @@ export const TOURS_CONFIG = {
         duration: '3-4 horas',
         difficulty: 'principiante'
     },
+    'training-camp': {
+        name: 'Training Camp Costa Brava',
+        difficulty: 'avanzado'
+    },
     'personalizado': {
         name: 'Tour Personalizado',
         price: 'a determinar',
